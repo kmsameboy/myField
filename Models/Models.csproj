@@ -46,16 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comment.cs" />
     <Compile Include="FactTable.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="FieldContext.cs" />
-    <Compile Include="Migrations\201403011515327_initial.cs" />
-    <Compile Include="Migrations\201403011515327_initial.Designer.cs">
-      <DependentUpon>201403011515327_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201403161044596_AddedPressureToFacts.cs" />
-    <Compile Include="Migrations\201403161044596_AddedPressureToFacts.Designer.cs">
-      <DependentUpon>201403161044596_AddedPressureToFacts.cs</DependentUpon>
+    <Compile Include="Migrations\201403191357432_Initial.cs" />
+    <Compile Include="Migrations\201403191357432_Initial.Designer.cs">
+      <DependentUpon>201403191357432_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,11 +63,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201403011515327_initial.resx">
-      <DependentUpon>201403011515327_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201403161044596_AddedPressureToFacts.resx">
-      <DependentUpon>201403161044596_AddedPressureToFacts.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201403191357432_Initial.resx">
+      <DependentUpon>201403191357432_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

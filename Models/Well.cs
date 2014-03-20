@@ -21,9 +21,15 @@ namespace Models
         [Required]
         public string Name { get; set; }
 
+        public DateTime DrillDate { get; set; }
+
+        public DateTime ProductionDate { get; set; }
+
         public int CoordinateX { get; set; }
 
         public int CoordinateY { get; set; }
+
+        public IEnumerable<Comment> Comments { get; set; }
 
     }
 }

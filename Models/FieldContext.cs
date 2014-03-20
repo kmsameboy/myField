@@ -14,6 +14,7 @@ namespace Models
         public DbSet<Well> Wells { get; set; }
         public DbSet<Field> Fields { get; set; }
         public DbSet<FactTable> Facts { get; set; }
+        //public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -3,7 +3,7 @@ namespace Models.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -13,7 +13,8 @@ namespace Models.Migrations
                     {
                         Id = c.Guid(nullable: false, identity: true),
                         Production = c.Double(nullable: false),
-                        ProductionDate = c.DateTime(nullable: false),
+                        Date = c.DateTime(nullable: false),
+                        Pressure = c.Double(nullable: false),
                         Well_Id = c.Guid(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -26,6 +27,8 @@ namespace Models.Migrations
                     {
                         Id = c.Guid(nullable: false, identity: true),
                         Name = c.String(nullable: false),
+                        DrillDate = c.DateTime(nullable: false),
+                        ProductionDate = c.DateTime(nullable: false),
                         CoordinateX = c.Int(nullable: false),
                         CoordinateY = c.Int(nullable: false),
                         Field_Id = c.Guid(nullable: false),

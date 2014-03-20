@@ -29,6 +29,8 @@ namespace TestGUI
     public partial class MainWindow : Window
     {
 
+        private const string DATE_FORMAT = "dd.MM.yyyy";
+
         private FieldContext _db;
         public MainWindow()
         {
@@ -191,9 +193,26 @@ namespace TestGUI
             FieldOverview.Visibility = System.Windows.Visibility.Hidden;
             WellOverview.Visibility = System.Windows.Visibility.Visible;
 
+            WriteWellInformation(name);
             DrawWellProduction(name);
             DrawWellPressure(name);
             //DrawWellPieChart(name);
+            DrawWellImage(name);
+        }
+
+        private void WriteWellInformation(string name)
+        {
+            var well = _db.Wells.SingleOrDefault(w => w.Name.Equals(name));
+            WellName.Text = well.Name;
+            WellDrillDate.Text = well.DrillDate.ToString(DATE_FORMAT);
+            WellProductionDate.Text = well.ProductionDate.ToString(DATE_FORMAT);
+        }
+
+        private void DrawWellImage(string name)
+        {
+            var imagePath = "Well.PNG";
+            imagePath = ConfigurationManager.AppSettings["ImageRootPath"].ToString() + imagePath;
+            WellStructure.Background = new ImageBrush(new BitmapImage(new Uri(imagePath)));
         }
 
         private void DrawWellPieChart(string name)

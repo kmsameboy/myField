@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Field
+    public class Comment
     {
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
+        public Well Well { get; set; }
+
+        public string Author { get; set; }
+
         [Required]
-        public string Name { get; set; }
+        public DateTime PostedDate { get; set; }
 
-        public string MapImage { get; set; }
-
-        public IList<Well> Wells { get; set; }
-
-        public IEnumerable<Comment> Comments { get; set; }
+        [Required]
+        public string Body { get; set; }
 
     }
 }

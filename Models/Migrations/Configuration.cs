@@ -26,13 +26,15 @@ namespace Models.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            var ktl = new Field { MapImage = "", Name = "KTL" };
-            var sgp = new Field { MapImage = "", Name = "SGP" };
+            var ktl = new Field { MapImage = "Field A.png", Name = "KTL" };
+            var sgp = new Field { MapImage = "Field B.png", Name = "SGP" };
 
             var w1 = new Well
             {
                 Name = "A1",
                 Field = ktl,
+                DrillDate = new DateTime(2014, 1, 1),
+                ProductionDate = new DateTime(2014, 1, 1),
                 CoordinateX = 100,
                 CoordinateY = 100
             };
@@ -41,6 +43,8 @@ namespace Models.Migrations
             {
                 Name = "A2",
                 Field = ktl,
+                DrillDate = new DateTime(2014, 1, 1),
+                ProductionDate = new DateTime(2014, 1, 1),
                 CoordinateX = 300,
                 CoordinateY = 100
             };
@@ -49,6 +53,8 @@ namespace Models.Migrations
             {
                 Name = "A3",
                 Field = ktl,
+                DrillDate = new DateTime(2014, 1, 1),
+                ProductionDate = new DateTime(2014, 1, 1),
                 CoordinateX = 100,
                 CoordinateY = 300
             };
@@ -57,6 +63,8 @@ namespace Models.Migrations
             {
                 Name = "B1",
                 Field = sgp,
+                DrillDate = new DateTime(2014, 1, 1),
+                ProductionDate = new DateTime(2014, 1, 1),
                 CoordinateX = 100,
                 CoordinateY = 100
             };
@@ -65,6 +73,8 @@ namespace Models.Migrations
             {
                 Name = "B2",
                 Field = sgp,
+                DrillDate = new DateTime(2014, 1, 1),
+                ProductionDate = new DateTime(2014, 1, 1),
                 CoordinateX = 250,
                 CoordinateY = 100
             };
